@@ -49,3 +49,13 @@ def test_negative_side_length():
 
 
 
+#8 speed_converter  dist valid check
+def test_valid_dist_check():
+    with pytest.raises(ValueError):
+        session5.speed_converter(speed = 10 , dist = 0 , time = 'ms')
+
+
+#9 speed_converter Time valid check
+def test_valid_time_check():
+    with pytest.raises(ValueError):
+        session5.speed_converter(speed = -100 , dist = 'KM' , time = 0)
