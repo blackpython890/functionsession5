@@ -19,7 +19,7 @@ def time_it(fn, *args, repetitons= 1, **kwargs):
 
 
 
-def temp_converter(temp , temp_given_in):
+def temp_converter(temp , temp_given_in= 'F'):
 
     if temp < 0:
         raise ValueError("Input Temperature is Negative")
@@ -35,7 +35,7 @@ def temp_converter(temp , temp_given_in):
 
 
 
-def polygon_area(side_length , side):
+def polygon_area(side_length = 1 , side = 3 ):
 
     if side_length <= 0:
         raise ValueError("How come Side is zero.")
@@ -55,7 +55,7 @@ def polygon_area(side_length , side):
 
 
 
-def speed_converter(speed , dist , time):
+def speed_converter(speed , dist = 'KM', time = 'HR'):
 
     if speed < 0 or type(dist) == str or type(time) == str:
         raise ValueError("Invalid Input Format")
@@ -117,5 +117,17 @@ def speed_converter(speed , dist , time):
 
 
 
-def squared_power_list():
-    pass
+
+
+def squared_power_list( number , start = 0 , end = 5 ):
+
+    a = []
+    if number < 0 or type(start) != int or type(end) != int :
+        raise ValueError("Negative Number not allowed")
+    else:
+        if start > end :
+            raise ValueError("proper number start and end is not mentioned")
+        else:
+            for i in range( start , end ):
+                a.append( number**i )
+            return a
