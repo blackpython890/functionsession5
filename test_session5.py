@@ -1,10 +1,10 @@
-import pytest , session5 , re , inspect , os
+import pytest , session5 , re , inspect 
 
 
 #1 Inavlid Temperature Type Check
 def test_invalidtemperature():
     with pytest.raises(NotImplementedError):
-       session5.temp_converter(temp_given_in = 'x')
+       session5.temp_converter(temp = 32 , temp_given_in = 'x')
 
 
 #2 README Exists
@@ -24,4 +24,7 @@ def test_identation():
 #4 Out of Range Polygon check.
 def test_notvalidpolygon():
     with pytest.raises(NotImplementedError):
-        session5.polygon_area(side = 10)
+        session5.polygon_area(side_length = 5 , side = 10)
+
+
+ 
