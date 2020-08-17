@@ -121,3 +121,10 @@ def test_square_power_return_number():
 def test_temp_return_type_check():
     a = session5.temp_converter( 15 , temp_given_in = 'C')
     assert type(a) == float or type(a) == int , "How How temperature can be in String"
+
+
+
+#19 Square Power Check
+def test_squared_power_list():
+    q1=session5.squared_power_list(2 , start=0, end=5 )
+    assert q1 == [1, 2, 4, 8, 16, 32] ,'Wrong Result'
