@@ -105,5 +105,12 @@ def test_wrong_square_power_combo():
 
 #16 squared_power_list invalid number pass
 def test_string_number_check():
-    with pytest.raises(ValueError):
+    with pytest.raise(ValueError):
         session5.squared_power_list( number = 'Hola' , start = 'xyz'  , end = 7 )
+
+
+
+#17 Return Type Check
+def test_square_power_return_number():
+     a = session5.squared_power_list( number = 2 , start = 1 , end = 4 )
+    assert type(a) == list , 'Invalid Return Type'
