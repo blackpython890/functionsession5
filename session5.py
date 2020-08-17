@@ -34,9 +34,9 @@ def temp_converter(temp , temp_given_in):
 def polygon_area(side_length , side):
 
     if side <= 0 and side >=7:
-        raise NotImplementedError("Side Greater than 6 not implemented")
+        raise NotImplementedError
     elif side in ( 2 , 1 ):
-        raise ValueError("No Polygon of Side 1 & 2 Exists")
+        raise ValueError
     elif side == 3:
         return True
     elif side == 4:
