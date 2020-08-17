@@ -1,5 +1,8 @@
 import pytest , session5 , re , inspect , os
 
+README_CONTENT_CHECK_FOR = ['temp_convertor']
+
+
 
 #1 Inavlid Temperature Type Check
 def test_invalidtemperature():
@@ -143,3 +146,17 @@ def test_readme_words_counts():
     readme_words = readme.read().split()
     readme.close()
     assert len(readme_words) >= 100 , "Kindly define README properly"
+
+
+
+#22 Read Proper Description
+def test_readme_proper_desscription():
+    READMELOOKSGOOD = True
+    readme = open('README.md','r')
+    readme_words = readme.read().split()
+    readme.close()
+    for words in README_CONTENT_CHECK_FOR:
+        if words not in readme_words:
+            READMELOOKSGOOD = False
+            pass
+    assert READMELOOKSGOOD == True , "You have not defined all functions/classes in README.md"
