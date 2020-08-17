@@ -36,14 +36,14 @@ def test_readme_for_formatting():
 
 
 #6 Speed negative check
-def test_speed_negative_check()
+def test_speed_negative_check():
     with pytest.raises(ValueError):
         session5.speed_converter(speed = -10 , dist = km , time = ms )
 
 
 
 #7 Ploygon side length negative
-def test_negative_side_length()
+def test_negative_side_length():
     with pytest.raises(ValueError):
         session5.polygon_area( side_length = -3 , side = 9)
 
