@@ -27,4 +27,9 @@ def test_notvalidpolygon():
         session5.polygon_area(side_length = 5 , side = 10)
 
 
- 
+#5 README formatting
+def test_readme_for_formatting():
+    readme = open('README.md','r')
+    content = readme.read()
+    readme.close()
+    assert content.count('#') >= 5 , "Kindly format the README.md"
