@@ -35,7 +35,7 @@ def test_readme_for_formatting():
     assert content.count('#') >= 5 , "Kindly format the README.md"
 
 
-#6 Speed negative check
+#6 speed_converter  negative check
 def test_speed_negative_check():
     with pytest.raises(ValueError):
         session5.speed_converter(speed = -10 , dist = 'km' , time = 'ms' )
@@ -59,3 +59,9 @@ def test_valid_dist_check():
 def test_valid_time_check():
     with pytest.raises(ValueError):
         session5.speed_converter(speed = -100 , dist = 'KM' , time = 0)
+
+
+#10 speed_converter wrong combination arguments.
+def test_wrong_combination_input():
+    with pyest.raises(ValueError):
+        session5.speed_converter(speed = 200 , dist = 'KM' , time = 'lightyear')
