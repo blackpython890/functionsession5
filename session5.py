@@ -37,13 +37,13 @@ def polygon_area(side_length , side):
         raise NotImplementedError("Side Greater than 6 not implemented")
     elif side in ( 2 , 1 ):
         raise ValueError("No Polygon of Side 1 & 2 Exists")
-    elif side = 3:
+    elif side == 3:
         return True
-    elif side = 4:
+    elif side == 4:
         return side_length*side_length
-    elif side = 5:
+    elif side == 5:
         return True
-    elif side = 6:
+    elif side == 6:
         return True
 
 
@@ -60,7 +60,7 @@ def speed_converter(speed , dist , time):
             return True
         elif time.upper() == 'DAY':
             return True
-        else
+        else:
            raise ValueError("Valid Distance Invalid Time")
     elif dist.upper == 'M':
         if time.upper()  == 'S':
@@ -73,7 +73,7 @@ def speed_converter(speed , dist , time):
             return True
         elif time.upper() == 'DAY':
             return True
-        else
+        else:
            raise ValueError("Valid Distance Invalid Time")
     elif dist.upper == 'FT':
         if time.upper()  == 'S':
@@ -86,7 +86,7 @@ def speed_converter(speed , dist , time):
             return True
         elif time.upper() == 'DAY':
             return True
-        else
+        else:
            raise ValueError("Valid Distance Invalid Time")
     elif dist.upper == 'YRD':
         if time.upper()  == 'S':
@@ -99,7 +99,7 @@ def speed_converter(speed , dist , time):
             return True
         elif time.upper() == 'DAY':
             return True
-        else
+        else:
            raise ValueError("Valid Distance Invalid Time")
    else:
       raise ValueError("Invalid User Distance Input")
