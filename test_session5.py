@@ -63,5 +63,5 @@ def test_valid_time_check():
 
 #10 speed_converter wrong combination arguments.
 def test_wrong_combination_input():
-    with pyest.raises(ValueError):
+    with pytest.raises(ValueError):
         session5.speed_converter(speed = 200 , dist = 'KM' , time = 'lightyear')
