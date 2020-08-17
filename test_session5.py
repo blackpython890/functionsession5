@@ -135,3 +135,11 @@ def test_squared_power_list():
 def test_print_function():
     a=print(1, 2, 3, sep='-', end= ' ***\n')
     assert bool(a) == False
+
+
+# 21 ReadMe Words Count
+def test_readme_words_counts():
+    readme = open('README.md','r')
+    readme_words = readme.read().split()
+    readme.close()
+    assert len(readme_words) >= 100 , "Kindly define README properly"
