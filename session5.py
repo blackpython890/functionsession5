@@ -52,8 +52,8 @@ def polygon_area(side_length , side):
 
 def speed_converter(speed , dist , time):
 
-    if speed < 0:
-        raise ValueError("Speed is negative.")
+    if speed < 0 or type(dist) == str or type(time) == str:
+        raise ValueError("Invalid Input Format")
     else:
         if dist.upper == 'KM':
             if time.upper()  == 'S':
