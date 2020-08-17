@@ -34,7 +34,7 @@ def temp_converter(temp , temp_given_in):
 def polygon_area(side_length , side):
 
     if side_length <= 0:
-       raise ValueError("How come Side is zero.")
+        raise ValueError("How come Side is zero.")
     else:
         if side <= 0 or side >=7:
             raise NotImplementedError 
