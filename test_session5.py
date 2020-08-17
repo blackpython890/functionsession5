@@ -25,6 +25,3 @@ def test_identation():
 def test_notvalidpolygon():
     with pytest.raises(NotImplementedError):
         session5.polygon_area(side = 10)
-
-
- 
