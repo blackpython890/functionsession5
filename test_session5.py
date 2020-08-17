@@ -128,3 +128,10 @@ def test_temp_return_type_check():
 def test_squared_power_list():
     q1=session5.squared_power_list(2 , start=0, end=5 )
     assert q1 == [1, 2, 4, 8, 16, 32] ,'Wrong Result'
+
+
+
+#20 print check
+def test_print_function():
+    a=print(1, 2, 3, sep='-', end= ' ***\n')
+    assert bool(a) == False
