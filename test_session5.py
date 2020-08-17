@@ -112,5 +112,5 @@ def test_string_number_check():
 
 #17 Return Type Check
 def test_square_power_return_number():
-     a = session5.squared_power_list( number = 2 , start = 1 , end = 4 )
-    assert type(a) == list , 'Invalid Return Type'
+     a = session5.squared_power_list( 2 , start = 1 , end = 4 )
+    assert type(a) is list , 'Invalid Return Type'
