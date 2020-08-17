@@ -33,8 +33,8 @@ def temp_converter(temp , temp_given_in):
 
 def polygon_area(side_length , side):
 
-    if side <= 0 and side >=7:
-        raise NotImplementedError
+    if side <= 0 or side >=7:
+        raise NotImplementedError("Polygon of Side greater than 6 not implemented.")
     elif side in ( 2 , 1 ):
         raise ValueError
     elif side == 3:
