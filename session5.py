@@ -122,7 +122,7 @@ def speed_converter(speed , dist = 'KM', time = 'HR'):
 def squared_power_list( number , start = 0 , end = 5 ):
 
     a = []
-    if number < 0 or type(start) != int or type(end) != int :
+    if number < 0 or type(start) != int or type(end) != int or type(number) != int :
         raise ValueError("Negative Number not allowed")
     else:
         if start > end :
