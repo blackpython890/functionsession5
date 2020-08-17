@@ -6,13 +6,13 @@ def time_it(fn, *args, repetitons= 1, **kwargs):
 
     if fn == 'temp_converter':
         start_time = time.time()
-        for i in range( repetitons )
+        for _ in range( repetitons ):
             temp_converter(args)
         end_time = time.time()
         return (end_time-start_time)/repetitons
     elif fn == 'polygon_area':
         start_time = time.time()
-        for i in range( repetitons )
+        for _ in range( repetitons )
             temp_converter(args)
         end_time = time.time()
         return (end_time-start_time)/repetitons
