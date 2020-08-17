@@ -33,76 +33,82 @@ def temp_converter(temp , temp_given_in):
 
 def polygon_area(side_length , side):
 
-    if side <= 0 or side >=7:
-        raise NotImplementedError("Polygon of Side greater than 6 not implemented.")
-    elif side in ( 2 , 1 ):
-        raise ValueError
-    elif side == 3:
-        return True
-    elif side == 4:
-        return side_length*side_length
-    elif side == 5:
-        return True
-    elif side == 6:
-        return True
+    if side_length <= 0:
+       raise ValueError("How come Side is zero.")
+    else:
+        if side <= 0 and side >=7:
+            raise NotImplementedError 
+        elif side in ( 2 , 1 ):
+            raise ValueError("No Polygon of Side 1 & 2 Exists")
+        elif side == 3:
+            return True
+        elif side == 4:
+            return side_length*side_length
+        elif side == 5:
+            return True
+        elif side == 6:
+            return True
 
 
 def speed_converter(speed , dist , time):
 
-    if dist.upper == 'KM':
-        if time.upper()  == 'S':
-            return True
-        elif time.upper == 'MS':
-            return True
-        elif time.upper() == 'M':
-            return True
-        elif time.upper() == 'HR':
-            return True
-        elif time.upper() == 'DAY':
-            return True
-        else:
-           raise ValueError("Valid Distance Invalid Time")
-    elif dist.upper == 'M':
-        if time.upper()  == 'S':
-            return True
-        elif time.upper == 'MS':
-            return True
-        elif time.upper() == 'M':
-            return True
-        elif time.upper() == 'HR':
-            return True
-        elif time.upper() == 'DAY':
-            return True
-        else:
-           raise ValueError("Valid Distance Invalid Time")
-    elif dist.upper == 'FT':
-        if time.upper()  == 'S':
-            return True
-        elif time.upper == 'MS':
-            return True
-        elif time.upper() == 'M':
-            return True
-        elif time.upper() == 'HR':
-            return True
-        elif time.upper() == 'DAY':
-            return True
-        else:
-           raise ValueError("Valid Distance Invalid Time")
-    elif dist.upper == 'YRD':
-        if time.upper()  == 'S':
-            return True
-        elif time.upper == 'MS':
-            return True
-        elif time.upper() == 'M':
-            return True
-        elif time.upper() == 'HR':
-            return True
-        elif time.upper() == 'DAY':
-            return True
-        else:
-           raise ValueError("Valid Distance Invalid Time")
+    if speed < 0:
+        raise ValueError("Speed is negative.")
     else:
-      raise ValueError("Invalid User Distance Input")
+        if dist.upper == 'KM':
+            if time.upper()  == 'S':
+                return True
+            elif time.upper == 'MS':
+                return True
+            elif time.upper() == 'M':
+                return True
+            elif time.upper() == 'HR':
+                return True
+            elif time.upper() == 'DAY':
+                return True
+            else:
+                raise ValueError("Valid Distance Invalid Time")
+        elif dist.upper == 'M':
+            if time.upper()  == 'S':
+                return True
+            elif time.upper == 'MS':
+                return True
+            elif time.upper() == 'M':
+                return True
+            elif time.upper() == 'HR':
+                return True
+            elif time.upper() == 'DAY':
+                return True
+            else:
+                raise ValueError("Valid Distance Invalid Time")
+        elif dist.upper == 'FT':
+            if time.upper()  == 'S':
+                return True
+            elif time.upper == 'MS':
+                return True
+            elif time.upper() == 'M':
+                return True
+            elif time.upper() == 'HR':
+                return True
+            elif time.upper() == 'DAY':
+                return True
+            else:
+                raise ValueError("Valid Distance Invalid Time")
+        elif dist.upper == 'YRD':
+            if time.upper()  == 'S':
+                return True
+            elif time.upper == 'MS':
+                return True
+            elif time.upper() == 'M':
+                return True
+            elif time.upper() == 'HR':
+                return True
+            elif time.upper() == 'DAY':
+                return True
+            else:
+                raise ValueError("Valid Distance Invalid Time")
+        else:
+            raise ValueError("Invalid User Distance Input")
 
 
 def squared_power_list():
