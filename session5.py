@@ -21,14 +21,18 @@ def time_it(fn, *args, repetitons= 1, **kwargs):
 
 def temp_converter(temp , temp_given_in):
 
-    if temp_given_in.upper() == 'F':
-        t = (temp-32)*5/9
-        return t
-    elif temp_given_in.upper() == 'C':
-        t = 9/5 * (temp) + 32
-        return t
-    elif temp_given_in.upper() not in ('C' , 'F'):
-        raise NotImplementedError("Invalid Temperature Coneversion")
+    if temp < 0:
+        raise ValueError("Input Temperature is Negative")
+    else:
+        if temp_given_in.upper() == 'F':
+            t = (temp-32)*5/9
+            return t
+        elif temp_given_in.upper() == 'C':
+            t = 9/5 * (temp) + 32
+            return t
+        elif temp_given_in.upper() not in ('C' , 'F'):
+            raise NotImplementedError("Invalid Temperature Coneversion")
+
 
 
 def polygon_area(side_length , side):
@@ -48,6 +52,7 @@ def polygon_area(side_length , side):
             return True
         elif side == 6:
             return True
+
 
 
 def speed_converter(speed , dist , time):
@@ -109,6 +114,7 @@ def speed_converter(speed , dist , time):
                 raise ValueError("Valid Distance Invalid Time")
         else:
             raise ValueError("Invalid User Distance Input")
+
 
 
 def squared_power_list():
