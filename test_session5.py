@@ -81,7 +81,7 @@ def test_negative_temp_check():
         session5.temp_converter(temp = -1 , temp_given_in = 'c')
 
 
-
+'''
 #13 squared_power_list negative number check
 def test_negative_power_number():
     with pytest.raises(ValueError):
@@ -108,3 +108,4 @@ def test_string_number_check():
     with pytest.raise(ValueError):
         session5.squared_power_list( number = 'Hola' , start = 'xyz'  , end = 7 )
 
+'''
