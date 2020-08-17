@@ -36,7 +36,7 @@ def polygon_area(side_length , side):
     if side_length <= 0:
        raise ValueError("How come Side is zero.")
     else:
-        if side <= 0 and side >=7:
+        if side <= 0 or side >=7:
             raise NotImplementedError 
         elif side in ( 2 , 1 ):
             raise ValueError("No Polygon of Side 1 & 2 Exists")
