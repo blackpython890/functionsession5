@@ -110,7 +110,14 @@ def test_string_number_check():
 
 
 
-#17 Return Type Check
+#17 Return Type Check squared_power_list
 def test_square_power_return_number():
     a = session5.squared_power_list( number = 2 , start = 1 , end = 4 )
     assert type(a) == list , "Invalid Return Type"
+
+
+
+#18 temperature return type check
+def test_temp_return_type_check():
+    a = session5.temp_converter( 15 , temp_given_in = 'C')
+    assert type(a) == float or type(a) == int , "How How temperature can be in String"
