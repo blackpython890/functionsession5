@@ -9,7 +9,7 @@ def test_invalidtemperature():
 
 #2 README Exists
 def test_readmeexist():
-    assert os.path.isfile("READEME.md") , 'README File is missing'
+    assert os.path.isfile("README.md") , 'README File is missing'
 
 
 #5 identation check
