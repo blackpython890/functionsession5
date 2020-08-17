@@ -88,14 +88,14 @@ def test_negative_power_number():
         session5.squared_power_list( number = -5 )
 
 
-'''
+
 #14 squared_power_list inavlid start and end 
 def test_invalid_start_end():
     with pytest.raises(ValueError):
         session5.squared_power_list( number = 10 , start = 10 , end = 2)
 
 
-
+'''
 #15 squared_power_list wrong combination
 def test_wrong_square_power_combo():
     with pytest.raises(ValueError):
