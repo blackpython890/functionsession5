@@ -75,4 +75,9 @@ def test_funcation_had_cap_letter():
 
 
 
-#12 
+#12 temp_converter Negative temperature check
+def test_negative_temp_check():
+    with pytest.raises(ValueError):
+        session5.temp_converter(temp = -1 , temp_given_in = 'c')
+
+
