@@ -4,7 +4,7 @@ import pytest , session5 , re , inspect , os
 #1 Inavlid Temperature Type Check
 def test_invalidtemperature():
     with pytest.raises(NotImplementedError):
-       session5.temp_converter(temp = 32 , temp_given_in = 'x')
+        session5.temp_converter(temp = 32 , temp_given_in = 'x')
 
 
 #2 README Exists
@@ -33,3 +33,19 @@ def test_readme_for_formatting():
     content = readme.read()
     readme.close()
     assert content.count('#') >= 5 , "Kindly format the README.md"
+
+
+#6 Speed negative check
+def test_speed_negative_check()
+    with pytest.raises(ValueError):
+        session5.speed_converter(speed = -10 , dist = km , time = ms )
+
+
+
+#7 Ploygon side length negative
+def test_negative_side_length()
+    with pytest.raises(ValueError):
+        session5.polygon_area( side_length = -3 , side = 9)
+
+
+
