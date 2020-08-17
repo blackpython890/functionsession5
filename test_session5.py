@@ -38,7 +38,7 @@ def test_readme_for_formatting():
 #6 Speed negative check
 def test_speed_negative_check():
     with pytest.raises(ValueError):
-        session5.speed_converter(speed = -10 , dist = km , time = ms )
+        session5.speed_converter(speed = -10 , dist = 'km' , time = 'ms' )
 
 
 
