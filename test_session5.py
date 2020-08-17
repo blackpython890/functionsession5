@@ -1,4 +1,4 @@
-import pytest , session5 , re , inspect 
+import pytest , session5 , re , inspect , os
 
 
 #1 Inavlid Temperature Type Check
@@ -15,7 +15,7 @@ def test_readmeexist():
 #5 identation check
 def test_identation():
     lines = inspect.getsource(session5)
-    spaces = re.fndall('\n +.',lines)
+    spaces = re.findall('\n +.',lines)
     for space in spaces:
         assert re.search('[a-zA-Z#@\'\"]', space) , 'Your code identation does not follow PEP8 guidelines'
         assert len(re.sub(r'[a-zA-Z#@\n\"\']', '', space)) % 4 == 0 , 'Your code doesnot follow PEP8 guidelines'
