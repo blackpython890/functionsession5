@@ -65,3 +65,14 @@ def test_valid_time_check():
 def test_wrong_combination_input():
     with pytest.raises(ValueError):
         session5.speed_converter(speed = 200 , dist = 'KM' , time = 'lightyear')
+
+
+#11 Function name had caps letter
+def test_funcation_had_cap_letter():
+    functions = inspect.getmembers(session4, inspect.isfunction )
+    for function in functions:
+        assert len(re.findall('([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
+
+
+
+#12 
