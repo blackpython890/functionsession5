@@ -102,10 +102,8 @@ def test_wrong_square_power_combo():
         session5.squared_power_list( number = 10 , start = 'xyz' , end = 4 )
 
 
-'''
+
 #16 squared_power_list invalid number pass
 def test_string_number_check():
-    with pytest.raise(ValueError):
+    with pytest.raises(ValueError):
         session5.squared_power_list( number = 'Hola' , start = 'xyz'  , end = 7 )
-
-'''
