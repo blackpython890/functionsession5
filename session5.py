@@ -130,6 +130,6 @@ def squared_power_list( number , start = 0 , end = 5 ):
         if start > end :
             raise ValueError("proper number start and end is not mentioned")
         else:
-            for i in range( start , end ):
+            for i in range( start , end+1 ):
                 a.append( number**i )
             return a
